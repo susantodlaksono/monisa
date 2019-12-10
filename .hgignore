@@ -1,0 +1,32 @@
+\.orig$
+\.orig\..*$
+\.chg\..*$
+\.rej$
+\.conflict\~$
+\.bak$
+\.DS_Store$
+\.xlsx$
+\.xls$
+\.zip$
+\.sh$
+.hgignore$
+
+# IDE files
+nbproject
+\.idea
+\.tmlanguage\.cache$
+\.tmPreferences\.cache$
+\.stTheme\.cache$
+\.sublime-workspace$
+\.sublime-project$
+
+# CodeIgniter files
+application/cache/(?!(\.htaccess|index\.html))
+application/logs/(?!(index\.html))
+application/vendor
+
+# NPM files
+node_modules
+
+# Application files
+\.css\.map$

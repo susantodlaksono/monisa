@@ -1,0 +1,29 @@
+.please-wait{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(255, 255, 255, 0.7);
+   z-index: 70;
+   display: inline-block;
+}
+.please-wait > .fa {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-left: -15px;
+   margin-top: -15px;
+   color: #ff0b0b;
+   font-size: 30px;
+}
+ .please-wait > p{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-left: -40px;
+   margin-top: 15px;
+   color: #ff0b0b;
+   font-size: 13px;
+   font-weight: bold;
+}

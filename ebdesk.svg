@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     width="110px" height="110px" viewBox="0 0 110 110" style="enable-background:new 0 0 110 110;" xml:space="preserve"
+>
+<style type="text/css">
+<![CDATA[
+	.font{fill:#FFF;-webkit-animation: opacity 3.5s forwards;-moz-animation: opacity 3.5s forwards;animation: opacity 3.5s forwards;}
+	.line1{fill:none;stroke:#F00;stroke-width:6;stroke-miterlimit:10;stroke-linecap:round;}
+	.line2{fill:none;stroke:#F00;stroke-width:6;stroke-miterlimit:10;stroke-linecap:round;}
+	.line3{fill:none;stroke:#F00;stroke-width:6;stroke-miterlimit:10;stroke-linecap:round;}
+	.line4{fill:none;stroke:#F00;stroke-width:6;stroke-miterlimit:10;stroke-linecap:round;}
+	.box{fill:#FFF;stroke:#F00;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.box {
+			stroke-dasharray: 450;
+			stroke-dashoffset: 0;
+			-webkit-animation: dash 3.5s infinite;
+			-moz-animation: dash 3.5s infinite;
+			animation: dash 3.5s infinite;
+		}
+	.line1 {
+			stroke-dasharray: 55;
+			stroke-dashoffset: 0;
+			-webkit-animation: line 3.5s infinite;
+			-moz-animation: line 3.5s infinite;
+			animation: line 3.5s infinite;
+		}
+	.line2 {
+			stroke-dasharray: 55;
+			stroke-dashoffset: 0;
+			-webkit-animation: line 3.5s infinite;
+			-moz-animation: line 3.5s infinite;
+			animation: line 3.5s infinite;
+		}
+	.line3 {
+			stroke-dasharray: 150;
+			stroke-dashoffset: 0;
+			-webkit-animation: line2 3.5s infinite;
+			-moz-animation: line2 3.5s infinite;
+			animation: line2 3.5s infinite;
+		}
+	@-webkit-keyframes dash {
+			from{
+				stroke-dashoffset: 450;
+				fill-opacity : 0;
+			}
+			to {
+				stroke-dashoffset: 0;
+				fill-opacity : 1;
+			}
+			
+		}
+	@-moz-keyframes dash {
+			from{
+				stroke-dashoffset: 450;
+				fill-opacity : 0;
+			}
+			to {
+				stroke-dashoffset: 0;
+				fill-opacity : 1;
+			}
+			
+		}
+	@-webkit-keyframes line {
+			from{
+				stroke-dashoffset: 55;
+				fill-opacity : 0;
+			}
+			to {
+				stroke-dashoffset: 0;
+				fill-opacity : 1;				
+			}
+		}
+	@-moz-keyframes line {
+			from{
+				stroke-dashoffset: 55;
+				fill-opacity : 0;
+			}
+			to {
+				stroke-dashoffset: 0;
+				fill-opacity : 1;				
+			}
+		}
+	@-webkit-keyframes line2 {
+			from{
+				stroke-dashoffset: 150;
+				fill-opacity : 0;
+			}
+			to {
+				stroke-dashoffset: 0;
+				fill-opacity : 1;				
+			}
+		}
+	@-moz-keyframes line2 {
+			from{
+				stroke-dashoffset: 150;
+				fill-opacity : 0;
+			}
+			to {
+				stroke-dashoffset: 0;
+				fill-opacity : 1;				
+			}
+		}
+	@-webkit-keyframes opacity {
+		from{
+			opacity : 0;
+		}
+		to {
+			opacity : 1;				
+		}
+	}
+	@-moz-keyframes opacity {
+		from{
+			opacity : 0;
+		}
+		to {
+			opacity : 1;				
+		}
+	}
+	
+]]>
+</style>
+<g>
+	<path class="box" d="M52.029,54.833v51.003L5,79.372V30.163L52.029,4.164l47.028,25.999v49.209l-47.028,26.464l-1.589-0.894"/>
+	<path class="line1" d="M52.029,54.833l45.648-24.106"/>
+	<path class="line2" d="M52.029,54.833L6.379,30.727"/>
+	<path class="line3" d="M52.029,54.833l-0.001,40.091L66.45,75.259l9.667,5.667l21.562-50.199"/>
+</g>
+</svg>

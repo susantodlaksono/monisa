@@ -1,0 +1,38 @@
+.refreshing::before {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.refreshing::after {
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  content: '';
+  border: 5px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 5px solid #f11818;
+  -webkit-animation: spin 1s infinite ease-in-out;
+  animation: spin 1s infinite ease-in-out;
+  /*background-color: #4c7ff0;*/
+  left: 50%;
+  margin:0 auto;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
