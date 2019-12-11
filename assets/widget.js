@@ -14,7 +14,7 @@ Widget.Loader = function (module, data, containerId, load = true, callback) {
       cache: true,
       dataType: 'json',
       beforeSend: function(){
-        $('#' + containerId).html('<h2 class="text-danger text-center"><i class="fa fa-spinner fa-spin"></i></h2>');  
+        $('#' + containerId).html('<h2 class="text-danger text-center" style="color:#fff;"><i class="fa fa-refresh fa-spin"></i></h2>');  
       },
       error: function (jqXHR, status, errorThrown) {
          error_handle(jqXHR, status, errorThrown);
