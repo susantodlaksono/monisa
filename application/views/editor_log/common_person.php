@@ -127,8 +127,7 @@
                   </div>
                   <div style="border:1px solid #3c3c3c;padding:5px;text-align: center;margin-top: 5px;">
                      <h5 class="text-center bold">Migration</h5>
-                     <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-import">Download Alias</button>
-                     <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-upload">Upload Alias</button>
+                     <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-import"><i class="fa fa-download"></i> Download Common</button>
                   </div>
                </div>
             </div>
@@ -191,7 +190,7 @@
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             <h4 class="modal-title">Download Alias</h4>
          </div>
-         <form id="form-download" method="get" action="<?php echo site_url() ?>reporting/downloadAlias">
+         <form id="form-download" method="get" action="<?php echo site_url() ?>reporting/downloadCommonPerson">
             <input type="hidden" name="alias_type" value="1">
             <div class="modal-body">
                <div class="row">
@@ -199,14 +198,14 @@
                      <div class="form-group">
                         <label>Start Date</label>
                         <input type="hidden" id="data_date_download" name="sdate" value="<?php echo date('Y-m-d') ?>">
-                        <input type="text" class="form-control input-sm data_date_download" value="<?php echo date('d/M/Y') ?>">
+                        <input type="text" class="form-control input-sm data_date_download" value="<?php echo date('d/M/Y') ?>" style="color: #fff;background-color: #222222;border: 1px solid #525252;">
                      </div>
                   </div>
                   <div class="col-md-6">  
                      <div class="form-group">
                         <label>End Date</label>
                         <input type="hidden" id="data_date_download_edate" name="edate" value="<?php echo date('Y-m-d') ?>">
-                        <input type="text" class="form-control input-sm data_date_download_edate" value="<?php echo date('d/M/Y') ?>">
+                        <input type="text" class="form-control input-sm data_date_download_edate" value="<?php echo date('d/M/Y') ?>" style="color: #fff;background-color: #222222;border: 1px solid #525252;">
                      </div>
                   </div>
                </div>
@@ -218,6 +217,7 @@
       </div>
    </div>
 </div>
+
 
 <script type="text/javascript">
 
