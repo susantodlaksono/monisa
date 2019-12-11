@@ -47,6 +47,48 @@ class Editor_log extends MY_Controller {
       $this->rendering_page($data);
    }
 
+   public function alias_person_under(){
+      $data = array(
+         'title' => 'test',
+         '_css' => array(
+            'assets/plugins/simplepagination/simplePagination.css'
+         ),
+         '_js' => array(
+            'assets/plugins/simplepagination/jquery.simplePagination.js"',
+         ),
+         'result_view' => 'editor_log/alias_person_under',
+      );
+      $this->rendering_page($data);
+   }
+
+   public function alias_organization_under(){
+      $data = array(
+         'title' => 'test',
+         '_css' => array(
+            'assets/plugins/simplepagination/simplePagination.css'
+         ),
+         '_js' => array(
+            'assets/plugins/simplepagination/jquery.simplePagination.js"',
+         ),
+         'result_view' => 'editor_log/alias_organization_under',
+      );
+      $this->rendering_page($data);
+   }
+
+   public function alias_location_under(){
+      $data = array(
+         'title' => 'test',
+         '_css' => array(
+            'assets/plugins/simplepagination/simplePagination.css'
+         ),
+         '_js' => array(
+            'assets/plugins/simplepagination/jquery.simplePagination.js"',
+         ),
+         'result_view' => 'editor_log/alias_location_under',
+      );
+      $this->rendering_page($data);
+   }
+
    public function common_person(){
       $data = array(
          '_css' => array(
@@ -121,6 +163,33 @@ class Editor_log extends MY_Controller {
          }
          $response['result'] = $list;
          $response['total'] = $this->m_editor_log->getAlias('count', $params);
+      }else{
+         $response['total'] = 0;
+      }
+      $this->json_result($response);
+   }
+
+   public function getAliasUnder(){
+      $params = $this->input->get();
+      $list = array();
+      $params['user_id'] = $this->_user->id;
+      $data = $this->m_editor_log->getAliasUnder('get', $params);
+      if($data){
+         foreach ($data as $value) {
+            $list[] = array(
+               'id' => $value['id'],
+               'alias' => $value['alias'] ? str_replace('+', ' ', $value['alias']) : '',
+               'aliasreplaced' => $value['alias'] ? $value['alias'] : '',
+               'id_alias_parent' => $value['id_alias'],
+               'id_alias_master' => $value['id_master'],
+               'common_name' => $value['common_status'],
+               'blacklist_name' => $value['blacklist_status'],
+               'alias_no_spaces' => $value['alias'] ? str_replace('+', '_', $value['alias']) : '',
+               'total_news' => $value['total_news'] ? $value['total_news'] : '0',
+            );
+         }
+         $response['result'] = $list;
+         $response['total'] = $this->m_editor_log->getAliasUnder('count', $params);
       }else{
          $response['total'] = 0;
       }

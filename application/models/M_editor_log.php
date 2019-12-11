@@ -53,6 +53,50 @@ class M_editor_log extends CI_model{
 		}
 	}
 
+   public function getAliasUnder($mode,$params){      
+      $this->db->select('a.*, b.id as id_alias, c.id as id_master');
+      $this->db->join('alias_master_mapping as b', 'a.id = b.alias_parent', 'left');
+      $this->db->join('alias_master as c', 'a.id = c.alias', 'left');
+      // $this->db->join('alias_master as c', 'a.alias = c.alias and c.data_date ="'.$params['filter_date'].'"', 'left');
+      $this->db->where('a.priority IS NULL');
+      $this->db->where('a.alias_type', $params['type']);
+      $this->db->where('a.data_date', $params['filter_date']);
+      
+      if($params['filter_keyword'] != ""){
+         $alias_replaced = str_replace(' ', '+', $params['filter_keyword']);
+         $this->db->group_start();
+         $this->db->like('a.alias', $alias_replaced);
+         $this->db->group_end();
+      }
+      if($params['filter_common'] != ''){
+         $this->db->where('a.common_status', $params['filter_common'] == 1 ? 1 : NULL);
+      }
+      if($params['filter_blacklist'] != ''){
+         $this->db->where('a.blacklist_status', $params['filter_blacklist'] == 1 ? 1 : NULL);
+      }
+      if($params['filter_master'] != ''){
+         if($params['filter_master'] == 1){
+            $this->db->where('c.id IS NOT NULL');
+         }else{
+            $this->db->where('c.id IS NULL');
+         }
+      }
+      if($params['filter_alias'] != ''){
+         if($params['filter_alias'] == 1){
+            $this->db->where('b.id IS NOT NULL');
+         }else{
+            $this->db->where('b.id IS NULL');
+         }
+      }
+      $this->db->order_by('a.total_news', 'desc');
+      switch ($mode) {
+         case 'get':
+            return $this->db->get('alias_monitoring as a', 30, $params['offset'])->result_array();
+         case 'count':
+            return $this->db->get('alias_monitoring as a')->num_rows();
+      }
+   }
+
    public function searchAlias($mode,$params){      
       $this->db->select('a.*, b.id as id_alias, c.id as id_master');
       $this->db->join('alias_master_mapping as b', 'a.id = b.alias_parent', 'left');

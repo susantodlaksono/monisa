@@ -125,11 +125,6 @@
                         </div>
                      </div>
                   </div>
-                  <div style="border:1px solid #3c3c3c;padding:5px;text-align: center;margin-top: 5px;">
-                     <h5 class="text-center bold">Migration</h5>
-                     <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-import">Download Alias</button>
-                     <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-upload">Upload Alias</button>
-                  </div>
                </div>
             </div>
          </div>
@@ -157,67 +152,6 @@
    </div>
 </div>
 
-<div class="modal fade" id="modal-upload">
-   <div class="modal-dialog" style="width: 35%;">
-      <div class="modal-content" style="background-color: #222222;">
-         <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">Upload Alias</h4>
-         </div>
-         <form id="form-upload">
-            <div class="modal-body">
-               <div class="form-group">
-                  <label>Upload Format</label>
-                  <input type="file" name="userfile" class="form-control">
-               </div>
-               <div class="form-group">
-                  <label>Data Date</label>
-                  <input type="hidden" id="data_date" name="data_date" value="<?php echo date('Y-m-d') ?>">
-                  <input type="text" class="form-control input-sm data_date" value="<?php echo date('d/M/Y') ?>">
-               </div>
-            </div>
-            <div class="modal-footer">
-               <button type="submit" class="btn btn-primary btn-block">Upload</button>
-            </div>
-         </form>
-      </div>
-   </div>
-</div>
-
-<div class="modal fade" id="modal-import">
-   <div class="modal-dialog" style="width: 35%;">
-      <div class="modal-content" style="background-color: #222222;">
-         <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">Download Alias</h4>
-         </div>
-         <form id="form-download" method="get" action="<?php echo site_url() ?>reporting/downloadAlias">
-            <input type="hidden" name="alias_type" value="1">
-            <div class="modal-body">
-               <div class="row">
-                  <div class="col-md-6">  
-                     <div class="form-group">
-                        <label>Start Date</label>
-                        <input type="hidden" id="data_date_download" name="sdate" value="<?php echo date('Y-m-d') ?>">
-                        <input type="text" class="form-control input-sm data_date_download" value="<?php echo date('d/M/Y') ?>">
-                     </div>
-                  </div>
-                  <div class="col-md-6">  
-                     <div class="form-group">
-                        <label>End Date</label>
-                        <input type="hidden" id="data_date_download_edate" name="edate" value="<?php echo date('Y-m-d') ?>">
-                        <input type="text" class="form-control input-sm data_date_download_edate" value="<?php echo date('d/M/Y') ?>">
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="modal-footer">
-               <button type="submit" class="btn btn-primary btn-block">Download</button>
-            </div>
-         </form>
-      </div>
-   </div>
-</div>
 
 <script type="text/javascript">
 
@@ -244,7 +178,6 @@
          var str = $.extend({
             offset : _offset,
             curpage : _curpage,
-            common_ref : 1,
             filter_keyword : $('#filter_keyword').val(),
             filter_common : $('input[name=filter_common]').filter(':checked').val(),
             filter_blacklist : $('input[name=filter_blacklist]').filter(':checked').val(),
@@ -254,19 +187,18 @@
          },params);
          ajaxManager.addReq({
             type : "GET",
-            url : site_url + 'editor_log/getAlias',
+            url : site_url + 'editor_log/getAliasUnder',
             dataType : "JSON",
             data : {
                offset : str.offset,
                curpage : str.curpage,
-               common_ref : str.common_ref,
                filter_keyword : str.filter_keyword,
                filter_date : str.filter_date,
                filter_common : str.filter_common,
                filter_blacklist : str.filter_blacklist,
                filter_master : str.filter_master,
                filter_alias : str.filter_alias,
-               type : 1
+               type : 2
             },
             beforeSend: function (xhr) {
                $panel.find('.sect-data').html(loading);
@@ -352,7 +284,7 @@
                   t += '</tbody>';
                   t += '</table>';
                }else{
-                  t += '<h3 class="text-center">No Result</h3>';
+                  t += '<h3 class="text-center" style="color:#fff">No Result</h3>';
                }
 
                $panel.find('.sect-data').html(t);
@@ -394,7 +326,7 @@
             data : {
                keyword : keyword,
                date : $('#filter_date').val(),
-               type : 1
+               type : 2
             },
             beforeSend: function (xhr) {
                $panel.find('.sect-data-search').html(loading);
@@ -760,7 +692,7 @@
             type : "POST",
             dataType : "JSON",
             data : {
-               type : 1
+               type : 2
             },
             error: function (jqXHR, status, errorThrown) {
                error_handle(jqXHR, status, errorThrown);

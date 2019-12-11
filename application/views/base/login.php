@@ -39,13 +39,13 @@
       }
    </style>
 </head>
-<body style="background-color: #003471">
+<body style="background-color: #222222">
    <div class="col-md-12" style="border:0px solid black;">
       <div class="row">
-         <div class="col-md-4 col-md-offset-4" style="border:1px solid #033f86;padding:50px;margin-top: 70px;background-color: #033f86;border-radius:5px;">
+         <div class="col-md-4 col-md-offset-4" style="border:1px solid #424242;padding:50px;margin-top: 70px;border-radius:5px;">
             <div class="col-md-12 text-center">
                <a href="<?php echo site_url() ?>" class="logo">
-                  <img src="<?php echo base_url() ?>logo.png" width="80" alt="" />
+                  <img src="<?php echo base_url() ?>logo.png" width="70" alt="" />
                </a>
             </div>
             <div class="col-md-12 text-center" style="margin-top:20px;">
@@ -56,22 +56,22 @@
                <form method="post" action="<?php echo site_url('security/verify') ?>">
                   <div class="form-group">
                      <div class="input-group" style="background-color:#ffffff;">
-                        <div class="input-group-addon">
+                        <div class="input-group-addon" style="background-color: #222222;color:#fff;">
                            <i class="entypo-user"></i>
                         </div>
-                        <input type="text" class="form-control" name="username" id="username" placeholder="Username" autocomplete="off" />
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Username" autocomplete="off" style="color: #fff;background-color: #222222;"/>
                      </div>
                   </div>
                   <div class="form-group">
                      <div class="input-group" style="background-color:#ffffff;">
-                        <div class="input-group-addon">
+                        <div class="input-group-addon" style="background-color: #222222;color:#fff;">
                            <i class="entypo-key"></i>
                         </div>
-                        <input type="password" class="form-control" name="password" id="password" placeholder="Password" />
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Password" style="color: #fff;background-color: #222222;"/>
                      </div>
                   </div>
                   <div class="form-group">
-                     <button type="submit" class="btn btn-blue btn-block">
+                     <button type="submit" class="btn btn-primary btn-block">
                         <i class="entypo-login"></i> Login In
                      </button>
                   </div>
