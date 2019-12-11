@@ -21,7 +21,7 @@
 
 
 </head>
-<body class="page-body skin-blue" data-url="http://neon.dev">
+<body class="page-body skin-black" data-url="http://neon.dev">
 
    <!-- <div class="refreshing" style="display:none;"></div> -->
    
@@ -34,7 +34,7 @@
             <?php echo Modules::run('base_menu'); ?>
          </div>
       </div>
-      <div class="main-content" style="background-color: #f7f7f7">
+      <div class="main-content" style="background-color:#222222;border-left:1px solid #3e3e3e;">
          <?php $this->load->view('base/top.php'); ?>
          <div id="container-content">
             <!-- <h3 class="text-muted bold"><i class="<?php echo $section_head['icon'] ?>"></i> <?php echo $section_head['name'] ?></h3>
@@ -58,7 +58,7 @@
    <script>
       var site_url = '<?php echo site_url(); ?>';
       var base_url = '<?php echo base_url(); ?>';
-      var loading = '<div class="please-wait"><i class="fa fa-refresh fa-spin" style="color: #000;"></i></div>';
+      var loading = '<div class="please-wait"><i class="fa fa-refresh fa-spin" style="color: #fff;"></i></div>';
       // var _csrf = '<?php echo $this->session->userdata('_csrf'); ?>';
    </script>
 

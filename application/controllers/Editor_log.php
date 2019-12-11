@@ -255,7 +255,7 @@ class Editor_log extends MY_Controller {
       $alias_monitoring = $this->getAliasName($id);
       $exp = explode('+', $alias_monitoring['alias']);
       foreach ($exp as $v) {
-         $data[] = substr($v, 0,3);
+         // $data[] = substr($v, 0,3);
          $data[] = $v;
       }
       return $data;

@@ -6,7 +6,7 @@
 <h3 style="margin-top: -10px;" class="text-muted"><?php echo $title['name'] ?></h3>
 <div class="row">
    <div class="col-md-3">
-      <div class="panel panel-primary" data-collapsed="0" id="cont-master">
+      <div class="panel panel-invert" data-collapsed="0" id="cont-master">
          <div class="panel-heading">
          	<div class="panel-options" style="width: auto">
                <div class="form-group" style="margin-top:12px;margin-bottom: 5px;"> 
@@ -25,7 +25,7 @@
   		</div>
 	</div>
 	<div class="col-md-9">
-      <div class="panel panel-primary" data-collapsed="0" id="panel-detail">
+      <div class="panel panel-invert" data-collapsed="0" id="panel-detail">
      		<div class="panel-body" style="">
      			<div class="please-wait" style="">
      				<i class="fa fa-file" style="color: #9e9b9b;"></i>
@@ -49,16 +49,16 @@
 							<div class="col-md-12">
 								<div class="btn-group dropdown-default"> 
 		                     <div class="input-group">
-		                        <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+		                        <div class="input-group-addon" style="background-color: #222222;border: 1px solid #525252;color:#fff;"><i class="fa fa-calendar"></i></div>
 		                        <input type="hidden" id="filter_date_alias" value="<?php echo date('Y-m-d') ?>">
-		                        <input type="text" class="form-control input-sm filter_date_alias" value="<?php echo date('d/M/Y') ?>">
+		                        <input type="text" class="form-control input-sm filter_date_alias" value="<?php echo date('d/M/Y') ?>" style="color: #fff;background-color: #222222;border: 1px solid #525252;">
 		                     </div>
 		                  </div>
 		                  <div class="btn-group dropdown-default">
-		                     <input type="text" id="filter_keyword_alias" class="form-control input-sm" placeholder="Search alias here..." style="width:260px"> 
+		                     <input type="text" id="filter_keyword_alias" class="form-control input-sm" placeholder="Search alias here..." style="width:260px;color: #fff;background-color: #222222;border: 1px solid #525252;"> 
 		                  </div>
 		                  <div class="btn-group dropdown-default"> 
-		                     <button class="btn btn-sm btn-blue btn-filter"><i class="fa fa-search"></i> Search</button>
+		                     <button class="btn btn-sm btn-primary btn-filter"><i class="fa fa-search"></i> Search</button>
 		                  </div>
 							</div>
 						</div>
@@ -77,11 +77,11 @@
 		                  </div>
 							</div>
 							<div class="col-md-3" style="margin-top: 10px;">
-								<form id="form-update-master" style="border:1px solid #e0e0e0;">
+								<form id="form-update-master" style="border:1px solid #3c3c3c;">
 		                     <h5 class="text-center bold">Selected Names</h5>
 		                     <ul class="list-group sect-selected"></ul>
-		                     <button type="submit" class="btn btn-blue btn-block btn-sm">Apply</button>
-		                     <button type="button" class="btn btn-default btn-block btn-sm btn-clear">Clear</button>
+		                     <button type="submit" class="btn btn-primary btn-block btn-sm">Apply</button>
+		                     <button type="button" class="btn btn-primary btn-block btn-sm btn-clear">Clear</button>
 		                  </form>
 							</div>
 						</div>
@@ -97,10 +97,10 @@
 		                     </div>
 		                  </div>
 		                  <div class="btn-group dropdown-default">
-		                     <input type="text" id="filter_keyword_alias_result" class="form-control input-sm" placeholder="Search alias here..." style="width:260px"> 
+		                     <input type="text" id="filter_keyword_alias_result" class="form-control input-sm" placeholder="Search alias here..."  style="color: #fff;background-color: #222222;border: 1px solid #525252;width:260px"> 
 		                  </div>
 		                  <div class="btn-group dropdown-default"> 
-		                     <button class="btn btn-sm btn-blue btn-filter-result"><i class="fa fa-search"></i> Search</button>
+		                     <button class="btn btn-sm btn-primary btn-filter-result"><i class="fa fa-search"></i> Search</button>
 		                  </div>
 							</div>
 						</div>
@@ -179,8 +179,8 @@
                	$.each(r.result, function(k,v){
                		t += '<li class="master-item">';
 		             		t += '<a href="'+v.id+'">';
-		                 		t += '<span class="text-danger media-name">'+v.master+'</span><br>';
-		                 		t += '<span class="text-muted media-last-check">';
+		                 		t += '<span class="media-name">'+v.master+'</span><br>';
+		                 		t += '<span class="text-muted media-last-check" style="color:#000">';
 		                        t += '<small>Total Alias : '+v.total_alias+' | Added By : '+v.pic+'</small>';
 		                    	t += '</span>';
 		                	t += '</a>';
@@ -313,7 +313,7 @@
 	               		t += '<td>'+v.data_date+'</td>';
 	               		t += '<td>'+v.username+'</td>';
 	               		t += '<td>';
-	               			t += '<button type="button" class="btn btn-default btn-xs delete-alias-master" data-id="'+v.id+'"><i class="fa fa-trash"></i></button>';
+	               			t += '<button type="button" class="btn btn-primary btn-xs delete-alias-master" data-id="'+v.id+'"><i class="fa fa-trash"></i></button>';
 	               		t += '</td>';
 	               	t += '</tr>';
                	});
@@ -423,9 +423,9 @@
          var alias = $('.alias-'+id+'').text();
          if($('.item-alias-'+aliasnoreplace+'').length == 0){
             var t = '';
-            t += '<li class="list-group-item item-alias-'+aliasnoreplace+'" style="padding:4px;">';
+            t += '<li class="list-group-item item-alias-'+aliasnoreplace+'" style="border: 0px;background-color: #4c4c4c;padding:4px;color:#fff;padding:4px;">';
                t += '<input type="hidden" name="alias_parent['+id+'][alias_parent]" value="'+id+'">';
-               t += '<button type="button" class="btn btn-xs btn-remove-selected" data-id=""><i class="fa fa-remove"></i></button>&nbsp;';
+               t += '<button type="button" class="btn btn-xs btn-primary btn-remove-selected" data-id=""><i class="fa fa-remove"></i></button>&nbsp;';
                t += ''+alias+'';
             t += '</li>';
             $('.sect-selected').prepend(t);  

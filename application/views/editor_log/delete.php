@@ -1,17 +1,17 @@
 <h3 style="margin-top: -10px;" class="text-muted">Delete Data</h3>
 <div class="row">
 	<div class="col-md-4">
-		<div class="panel panel-primary" data-collapsed="0">
+		<div class="panel panel-invert" data-collapsed="0">
 			<div class="panel-body" id="cont-data">
 				<form id="form-delete">
 					<div class="form-group">
 						<label>Tgl Data</label>
 						<input type="hidden" name="data_date" id="data_date" value="<?php echo date('Y-m-d') ?>">
-	               <input type="text" class="form-control input-sm dp" value="<?php echo date('d/M/Y') ?>">
+	               <input type="text" class="form-control input-sm dp" value="<?php echo date('d/M/Y') ?>" style="color: #fff;background-color: #222222;border: 1px solid #525252;">
 					</div>
 					<div class="form-group">
 						<label>Module</label>
-						<select class="form-control" name="type">
+						<select class="form-control" name="type" style="color: #fff;background-color: #222222;border: 1px solid #525252;">
 							<option value="1">Person</option>
 							<option value="2">Organization</option>
 							<option value="3">Location</option>
@@ -19,9 +19,9 @@
 					</div>
 					<div class="form-group">
 						<label>Password Login (For Autentication)</label>
-						<input type="password" name="password_login" class="form-control">
+						<input type="password" name="password_login" class="form-control" style="color: #fff;background-color: #222222;border: 1px solid #525252;">
 					</div>
-					<button type="submit" class="btn btn-blue btn-block"><i class="fa fa-trash"></i> Delete</button>
+					<button type="submit" class="btn btn-primary btn-block"><i class="fa fa-trash"></i> Delete</button>
 				</form>
 			</div>
 		</div>

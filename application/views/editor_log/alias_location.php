@@ -9,56 +9,56 @@
 <h3 style="margin-top: -10px;" class="text-muted"><?php echo $title['name'] ?></h3>
 <div class="row">
    <div class="col-md-12">
-      <div class="panel panel-primary" data-collapsed="0">
+      <div class="panel panel-invert" data-collapsed="0">
          <div class="panel-heading">
             <!-- <div class="panel-title"><i class="<?php echo $title['icon'] ?>"></i> <?php echo $title['name'] ?></div> -->
             <div class="panel-options" style="width: auto">
                <div class="form-group" style="margin-top:6px;margin-bottom: 5px;"> 
                   <!-- <div class="btn-group dropdown-default"> 
-                     <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#modal-import"><i class="fa fa-download"></i> Download Alias</button>
+                     <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-import"><i class="fa fa-download"></i> Download Alias</button>
                   </div>
                   <div class="btn-group dropdown-default"> 
-                     <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#modal-upload"><i class="fa fa-upload"></i> Upload Alias</button>
+                     <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-upload"><i class="fa fa-upload"></i> Upload Alias</button>
                   </div> -->
                   <div class="btn-group" data-toggle="buttons">
-                     <button type="button" class="btn btn-default btn-sm disabled bold">Common : </button>
-                     <label class="btn btn-default btn-sm active"><input type="radio" name="filter_common" class="filter_common" value="" checked="">All</label>
-                     <label class="btn btn-default btn-sm"><input type="radio" name="filter_common" class="filter_common" value="1">Yes</label>
-                     <label class="btn btn-default btn-sm"><input type="radio" name="filter_common" class="filter_common" value="2">No</label>                
+                     <button type="button" class="btn btn-primary btn-sm disabled bold">Common : </button>
+                     <label class="btn btn-primary btn-sm active"><input type="radio" name="filter_common" class="filter_common" value="" checked="">All</label>
+                     <label class="btn btn-primary btn-sm"><input type="radio" name="filter_common" class="filter_common" value="1">Yes</label>
+                     <label class="btn btn-primary btn-sm"><input type="radio" name="filter_common" class="filter_common" value="2">No</label>                
                   </div>
                   <div class="btn-group" data-toggle="buttons">
-                     <button type="button" class="btn btn-default btn-sm disabled bold">Blacklist : </button>
-                     <label class="btn btn-default btn-sm active"><input type="radio" name="filter_blacklist" class="filter_blacklist" value="" checked="">All</label>
-                     <label class="btn btn-default btn-sm"><input type="radio" name="filter_blacklist" class="filter_blacklist" value="1">Yes</label>
-                     <label class="btn btn-default btn-sm"><input type="radio" name="filter_blacklist" class="filter_blacklist" value="2">No</label>                
+                     <button type="button" class="btn btn-primary btn-sm disabled bold">Blacklist : </button>
+                     <label class="btn btn-primary btn-sm active"><input type="radio" name="filter_blacklist" class="filter_blacklist" value="" checked="">All</label>
+                     <label class="btn btn-primary btn-sm"><input type="radio" name="filter_blacklist" class="filter_blacklist" value="1">Yes</label>
+                     <label class="btn btn-primary btn-sm"><input type="radio" name="filter_blacklist" class="filter_blacklist" value="2">No</label>                
                   </div>
                   <div class="btn-group" data-toggle="buttons">
-                     <button type="button" class="btn btn-default btn-sm disabled bold">Master : </button>
-                     <label class="btn btn-default btn-sm active"><input type="radio" name="filter_master" class="filter_master" value="" checked="">All</label>
-                     <label class="btn btn-default btn-sm"><input type="radio" name="filter_master" class="filter_master" value="1">Yes</label>
-                     <label class="btn btn-default btn-sm"><input type="radio" name="filter_master" class="filter_master" value="2">No</label>                
+                     <button type="button" class="btn btn-primary btn-sm disabled bold">Master : </button>
+                     <label class="btn btn-primary btn-sm active"><input type="radio" name="filter_master" class="filter_master" value="" checked="">All</label>
+                     <label class="btn btn-primary btn-sm"><input type="radio" name="filter_master" class="filter_master" value="1">Yes</label>
+                     <label class="btn btn-primary btn-sm"><input type="radio" name="filter_master" class="filter_master" value="2">No</label>                
                   </div>
                   <div class="btn-group" data-toggle="buttons">
-                     <button type="button" class="btn btn-default btn-sm disabled bold">Alias : </button>
-                     <label class="btn btn-default btn-sm active"><input type="radio" name="filter_alias" class="filter_alias" value="" checked="">All</label>
-                     <label class="btn btn-default btn-sm"><input type="radio" name="filter_alias" class="filter_alias" value="1">Yes</label>
-                     <label class="btn btn-default btn-sm"><input type="radio" name="filter_alias" class="filter_alias" value="2">No</label>                
+                     <button type="button" class="btn btn-primary btn-sm disabled bold">Alias : </button>
+                     <label class="btn btn-primary btn-sm active"><input type="radio" name="filter_alias" class="filter_alias" value="" checked="">All</label>
+                     <label class="btn btn-primary btn-sm"><input type="radio" name="filter_alias" class="filter_alias" value="1">Yes</label>
+                     <label class="btn btn-primary btn-sm"><input type="radio" name="filter_alias" class="filter_alias" value="2">No</label>                
                   </div>
-                  <div class="btn-group dropdown-default"> 
+                  <div class="btn-group dropdown-default" style="width: 123px;"> 
                      <div class="input-group">
-                        <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                        <div class="input-group-addon" style="background-color: #222222;border: 1px solid #525252;color:#fff;"><i class="fa fa-calendar"></i></div>
                         <input type="hidden" id="filter_date" value="<?php echo date('Y-m-d') ?>">
-                        <input type="text" class="form-control input-sm filter_date" value="<?php echo date('d/M/Y') ?>">
+                        <input type="text" class="form-control input-sm filter_date" value="<?php echo date('d/M/Y') ?>" style="color: #fff;background-color: #222222;border: 1px solid #525252;">
                      </div>
                   </div>
                   <div class="btn-group dropdown-default" style="display: none;">
                      <input type="text" id="filter_keyword" class="form-control input-sm" placeholder="Search Alias Name Here..."> 
                   </div>
                   <div class="btn-group dropdown-default"> 
-                     <button class="btn btn-sm btn-blue btn-filter"><i class="fa fa-filter"></i> Filter</button>
+                     <button class="btn btn-sm btn-primary btn-filter"><i class="fa fa-filter"></i> Filter</button>
                   </div>
                   <div class="btn-group dropdown-default"> 
-                     <button class="btn btn-sm btn-default btn-modal-search-alias" data-toggle="modal" data-target="#modal-search-alias"><i class="fa fa-search"></i> Search Alias</button>
+                     <button class="btn btn-sm btn-primary btn-modal-search-alias" data-toggle="modal" data-target="#modal-search-alias"><i class="fa fa-search"></i> Search Alias</button>
                   </div>
                </div>
             </div>
@@ -78,33 +78,57 @@
                   </div>
                </div>
                <div class="col-md-3" style="">
-                  <div style="border:1px solid #e0e0e0;padding:5px;text-align: center;margin-bottom: 5px;">
-                     <h5 class="text-center bold">Migration</h5>
-                     <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#modal-import"><i class="fa fa-download"></i> Download Alias</button>
-                     <button class="btn btn-default btn-sm" data-toggle="modal" data-target="#modal-upload"><i class="fa fa-upload"></i> Upload Alias</button>
-                  </div>
-                  <form id="form-update-master" style="border:1px solid #e0e0e0;padding:5px;">
+                  <form id="form-update-master" style="border:1px solid #3c3c3c;padding:5px;">
                      <h5 class="text-center bold">Used as Master</h5>
                      <ul class="list-group sect-used"></ul>
                      <h5 class="text-center bold">Selected as Alias</h5>
                      <ul class="list-group sect-selected"></ul>
-                     <button type="submit" class="btn btn-blue btn-block btn-sm">Apply</button>
-                     <button type="button" class="btn btn-default btn-block btn-sm btn-clear">Clear</button>
+                     <button type="submit" class="btn btn-primary btn-block btn-sm">Apply</button>
+                     <button type="button" class="btn btn-primary btn-block btn-sm btn-clear">Clear</button>
                   </form>
-                  <div style="border:1px solid #e0e0e0;padding:5px;margin-top: 5px;text-align: center;">
-                     <h5 class="text-center bold">Bulk Master</h5>
-                     <button type="button" class="btn btn-blue btn-sm btn-add-master">Apply</button>
-                     <button type="button" class="btn btn-danger btn-sm btn-bulk-remove-master">Remove</button>  
+                  <div style="border:1px solid #3c3c3c;padding:5px;margin-top: 5px;text-align: center;">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <h5 class="text-left bold">Bulk Master</h5>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="btn-group">
+                              <button type="button" class="btn btn-primary btn-sm btn-add-master">Apply</button>
+                              <button type="button" class="btn btn-primary btn-sm btn-bulk-remove-master">Remove</button> 
+                           </div>
+                        </div>
+                     </div>
                   </div>
-                  <div style="border:1px solid #e0e0e0;padding:5px;margin-top: 5px;text-align: center;">
-                     <h5 class="text-center bold">Common Name</h5>
-                     <button type="button" class="btn btn-blue btn-sm btn-add-common">Apply</button>
-                     <button type="button" class="btn btn-danger btn-sm btn-remove-common">Remove</button>  
+                  <div style="border:1px solid #3c3c3c;padding:5px;margin-top: 5px;text-align: center;">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <h5 class="text-left bold">Common Name</h5>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="btn-group">
+                              <button type="button" class="btn btn-primary btn-sm btn-add-common">Apply</button>
+                              <button type="button" class="btn btn-primary btn-sm btn-remove-common">Remove</button>  
+                           </div>
+                        </div>
+                     </div>
                   </div>
-                  <div style="border:1px solid #e0e0e0;padding:5px;margin-top: 5px;text-align: center;">
-                     <h5 class="text-center bold">Blacklist</h5>
-                     <button type="button" class="btn btn-blue btn-sm btn-add-blacklist">Apply</button>
-                     <button type="button" class="btn btn-danger btn-sm btn-remove-blacklist">Remove</button>
+                  <div style="border:1px solid #3c3c3c;padding:5px;margin-top: 5px;text-align: center;">
+                     <div class="row">
+                        <div class="col-md-6">
+                           <h5 class="text-left bold">Blacklist</h5>
+                        </div>
+                        <div class="col-md-6">
+                           <div class="btn-group">
+                              <button type="button" class="btn btn-primary btn-sm btn-add-blacklist">Apply</button>
+                              <button type="button" class="btn btn-primary btn-sm btn-remove-blacklist">Remove</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div style="border:1px solid #3c3c3c;padding:5px;text-align: center;margin-top: 5px;">
+                     <h5 class="text-center bold">Migration</h5>
+                     <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-import">Download Alias</button>
+                     <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-upload">Upload Alias</button>
                   </div>
                </div>
             </div>
@@ -115,7 +139,7 @@
 
 <div class="modal fade" id="modal-search-alias">
    <div class="modal-dialog" style="width: 55%;">
-      <div class="modal-content">
+      <div class="modal-content" style="background-color: #222222;">
          <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             <h4 class="modal-title">Search Alias</h4>
@@ -127,7 +151,7 @@
             <div class="row sect-data-search" style="max-height: 335px;overflow: auto;"></div>
          </div>
          <div class="modal-footer">
-            <button class="btn btn-blue btn-block btn-search-alias"><i class="fa fa-search"></i> Search</button>
+            <button class="btn btn-primary btn-block btn-search-alias"><i class="fa fa-search"></i> Search</button>
          </div>
       </div>
    </div>
@@ -135,7 +159,7 @@
 
 <div class="modal fade" id="modal-upload">
    <div class="modal-dialog" style="width: 35%;">
-      <div class="modal-content">
+      <div class="modal-content" style="background-color: #222222;">
          <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             <h4 class="modal-title">Upload Alias</h4>
@@ -153,7 +177,7 @@
                </div>
             </div>
             <div class="modal-footer">
-               <button type="submit" class="btn btn-blue btn-block"><i class="fa fa-upload"></i> Upload</button>
+               <button type="submit" class="btn btn-primary btn-block">Upload</button>
             </div>
          </form>
       </div>
@@ -162,7 +186,7 @@
 
 <div class="modal fade" id="modal-import">
    <div class="modal-dialog" style="width: 35%;">
-      <div class="modal-content">
+      <div class="modal-content" style="background-color: #222222;">
          <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             <h4 class="modal-title">Download Alias</h4>
@@ -188,7 +212,7 @@
                </div>
             </div>
             <div class="modal-footer">
-               <button type="submit" class="btn btn-blue btn-block"><i class="fa fa-download"></i> Download</button>
+               <button type="submit" class="btn btn-primary btn-block">Download</button>
             </div>
          </form>
       </div>
@@ -268,13 +292,13 @@
                            t += '<button type="button" class="btn btn-info btn-xs btn-remove-alias" data-id="'+data[i].id_alias_parent+'">A</button>';   
                         }
                         if(data[i].common_name){
-                           t += '<button type="button" class="btn btn-primary btn-xs btn-remove-status" data-id="'+data[i].id+'" data-field="common_status">C</button>';   
+                           t += '<button type="button" class="btn btn-default btn-xs btn-remove-status" data-id="'+data[i].id+'" data-field="common_status">C</button>';   
                         }
                         if(data[i].blacklist_name){
                            t += '<button type="button" class="btn btn-danger btn-xs btn-remove-status" data-id="'+data[i].id+'" data-field="blacklist_status">B</button>';   
                         }
-                        t += '<button type="button" class="btn btn-default btn-xs selected-alias" data-id="'+data[i].id+'" data-aliasnoreplace="'+data[i].alias_no_spaces+'" data-aliasreplaced="'+data[i].aliasreplaced+'" data-total="'+data[i].total_news+'"><i class="fa fa-plus"></i></button>';
-                        t += '<button type="button" class="btn btn-default btn-xs used-alias" data-id="'+data[i].id+'" data-aliasreplaced="'+data[i].aliasreplaced+'" data-aliasnoreplace="'+data[i].alias_no_spaces+'" data-total="'+data[i].total_news+'">Used</button>';
+                        t += '<button type="button" class="btn btn-primary btn-xs selected-alias" data-id="'+data[i].id+'" data-aliasnoreplace="'+data[i].alias_no_spaces+'" data-aliasreplaced="'+data[i].aliasreplaced+'" data-total="'+data[i].total_news+'"><i class="fa fa-plus"></i></button>';
+                        t += '<button type="button" class="btn btn-primary btn-xs used-alias" data-id="'+data[i].id+'" data-aliasreplaced="'+data[i].aliasreplaced+'" data-aliasnoreplace="'+data[i].alias_no_spaces+'" data-total="'+data[i].total_news+'">Used</button>';
                         t += '</div>';
                         t += '</td>';
                         i++;
@@ -290,13 +314,13 @@
                               t += '<button type="button" class="btn btn-info btn-xs btn-remove-alias" data-id="'+data[i].id_alias_parent+'">A</button>';   
                            }
                            if(data[i].common_name){
-                              t += '<button type="button" class="btn btn-primary btn-xs btn-remove-status" data-id="'+data[i].id+'" data-field="common_status">C</button>';   
+                              t += '<button type="button" class="btn btn-default btn-xs btn-remove-status" data-id="'+data[i].id+'" data-field="common_status">C</button>';   
                            }
                            if(data[i].blacklist_name){
                               t += '<button type="button" class="btn btn-danger btn-xs btn-remove-status" data-id="'+data[i].id+'" data-field="blacklist_status">B</button>';   
                            }
-                           t += '<button type="button" class="btn btn-default btn-xs selected-alias" data-id="'+data[i].id+'" data-aliasnoreplace="'+data[i].alias_no_spaces+'" data-aliasreplaced="'+data[i].aliasreplaced+'" data-total="'+data[i].total_news+'"><i class="fa fa-plus"></i></button>';
-                           t += '<button type="button" class="btn btn-default btn-xs used-alias" data-id="'+data[i].id+'" data-aliasreplaced="'+data[i].aliasreplaced+'" data-aliasnoreplace="'+data[i].alias_no_spaces+'" data-total="'+data[i].total_news+'">Used</button>';
+                           t += '<button type="button" class="btn btn-primary btn-xs selected-alias" data-id="'+data[i].id+'" data-aliasnoreplace="'+data[i].alias_no_spaces+'" data-aliasreplaced="'+data[i].aliasreplaced+'" data-total="'+data[i].total_news+'"><i class="fa fa-plus"></i></button>';
+                           t += '<button type="button" class="btn btn-primary btn-xs used-alias" data-id="'+data[i].id+'" data-aliasreplaced="'+data[i].aliasreplaced+'" data-aliasnoreplace="'+data[i].alias_no_spaces+'" data-total="'+data[i].total_news+'">Used</button>';
                            t += '</div>';
                            t += '</td>';
                            i++;
@@ -312,13 +336,13 @@
                                  t += '<button type="button" class="btn btn-info btn-xs btn-remove-alias" data-id="'+data[i].id_alias_parent+'">A</button>';   
                               }
                               if(data[i].common_name){
-                                 t += '<button type="button" class="btn btn-primary btn-xs btn-remove-status" data-id="'+data[i].id+'" data-field="common_status">C</button>';   
+                                 t += '<button type="button" class="btn btn-default btn-xs btn-remove-status" data-id="'+data[i].id+'" data-field="common_status">C</button>';   
                               }
                               if(data[i].blacklist_name){
                                  t += '<button type="button" class="btn btn-danger btn-xs btn-remove-status" data-id="'+data[i].id+'" data-field="blacklist_status">B</button>';   
                               }
-                              t += '<button type="button" class="btn btn-default btn-xs selected-alias" data-id="'+data[i].id+'" data-aliasnoreplace="'+data[i].alias_no_spaces+'" data-aliasreplaced="'+data[i].aliasreplaced+'" data-total="'+data[i].total_news+'"><i class="fa fa-plus"></i></button>';
-                              t += '<button type="button" class="btn btn-default btn-xs used-alias" data-id="'+data[i].id+'" data-aliasreplaced="'+data[i].aliasreplaced+'" data-aliasnoreplace="'+data[i].alias_no_spaces+'" data-total="'+data[i].total_news+'">Used</button>';
+                              t += '<button type="button" class="btn btn-primary btn-xs selected-alias" data-id="'+data[i].id+'" data-aliasnoreplace="'+data[i].alias_no_spaces+'" data-aliasreplaced="'+data[i].aliasreplaced+'" data-total="'+data[i].total_news+'"><i class="fa fa-plus"></i></button>';
+                              t += '<button type="button" class="btn btn-primary btn-xs used-alias" data-id="'+data[i].id+'" data-aliasreplaced="'+data[i].aliasreplaced+'" data-aliasnoreplace="'+data[i].alias_no_spaces+'" data-total="'+data[i].total_news+'">Used</button>';
                               t += '</div>';
                               t += '</td>';
                            }
@@ -328,7 +352,7 @@
                   t += '</tbody>';
                   t += '</table>';
                }else{
-                  t += '<h3 class="text-center">No Result</h3>';
+                  t += '<h3 class="text-center" style="color:#fff">No Result</h3>';
                }
 
                $panel.find('.sect-data').html(t);
@@ -401,8 +425,8 @@
                         if(data[i].blacklist_name){
                            t += '<button type="button" class="btn btn-danger btn-xs btn-remove-status" data-id="'+data[i].id+'" data-field="blacklist_status">B</button>';   
                         }
-                        t += '<button type="button" class="btn btn-default btn-xs selected-alias" data-id="'+data[i].id+'" data-aliasnoreplace="'+data[i].alias_no_spaces+'" data-aliasreplaced="'+data[i].aliasreplaced+'" data-total="'+data[i].total_news+'"><i class="fa fa-plus"></i></button>';
-                        t += '<button type="button" class="btn btn-default btn-xs used-alias" data-id="'+data[i].id+'" data-aliasreplaced="'+data[i].aliasreplaced+'" data-aliasnoreplace="'+data[i].alias_no_spaces+'" data-total="'+data[i].total_news+'">Used</button>';
+                        t += '<button type="button" class="btn btn-primary btn-xs selected-alias" data-id="'+data[i].id+'" data-aliasnoreplace="'+data[i].alias_no_spaces+'" data-aliasreplaced="'+data[i].aliasreplaced+'" data-total="'+data[i].total_news+'"><i class="fa fa-plus"></i></button>';
+                        t += '<button type="button" class="btn btn-primary btn-xs used-alias" data-id="'+data[i].id+'" data-aliasreplaced="'+data[i].aliasreplaced+'" data-aliasnoreplace="'+data[i].alias_no_spaces+'" data-total="'+data[i].total_news+'">Used</button>';
                         t += '</div>';
                         t += '</td>';
                         i++;
@@ -423,8 +447,8 @@
                            if(data[i].blacklist_name){
                               t += '<button type="button" class="btn btn-danger btn-xs btn-remove-status" data-id="'+data[i].id+'" data-field="blacklist_status">B</button>';   
                            }
-                           t += '<button type="button" class="btn btn-default btn-xs selected-alias" data-id="'+data[i].id+'" data-aliasnoreplace="'+data[i].alias_no_spaces+'" data-aliasreplaced="'+data[i].aliasreplaced+'" data-total="'+data[i].total_news+'"><i class="fa fa-plus"></i></button>';
-                           t += '<button type="button" class="btn btn-default btn-xs used-alias" data-id="'+data[i].id+'" data-aliasreplaced="'+data[i].aliasreplaced+'" data-aliasnoreplace="'+data[i].alias_no_spaces+'" data-total="'+data[i].total_news+'">Used</button>';
+                           t += '<button type="button" class="btn btn-primary btn-xs selected-alias" data-id="'+data[i].id+'" data-aliasnoreplace="'+data[i].alias_no_spaces+'" data-aliasreplaced="'+data[i].aliasreplaced+'" data-total="'+data[i].total_news+'"><i class="fa fa-plus"></i></button>';
+                           t += '<button type="button" class="btn btn-primary btn-xs used-alias" data-id="'+data[i].id+'" data-aliasreplaced="'+data[i].aliasreplaced+'" data-aliasnoreplace="'+data[i].alias_no_spaces+'" data-total="'+data[i].total_news+'">Used</button>';
                            t += '</div>';
                            t += '</td>';
                         }
@@ -455,7 +479,7 @@
                id : str.id
             },
             beforeSend: function (xhr) {
-               $('.sect-selected').html(loading);
+               // $('.sect-selected').html(loading);
             },
             error: function (jqXHR, status, errorThrown) {
                error_handle(jqXHR, status, errorThrown);
@@ -464,8 +488,8 @@
                var t = '';
                if(r.total > 0){
                   $.each(r.result, function(k,v){
-                     t += '<li class="list-group-item bold text-info item-alias-'+v.alias_parent_no_spaces+'" style="padding:4px;">';
-                        t += '<button type="button" class="btn btn-xs btn-remove-selected" data-id="'+v.id+'"><i class="fa fa-remove"></i></button>&nbsp;';
+                     t += '<li class="list-group-item text-info item-alias-'+v.alias_parent_no_spaces+'" style="border: 0px;background-color: #4c4c4c;padding:4px;color:#fff;">';
+                        t += '<button type="button" class="btn btn-xs btn-primary btn-remove-selected" data-id="'+v.id+'"><i class="fa fa-remove"></i></button>&nbsp;';
                         t += ''+v.alias_parent+'';
                      t += '</li>';
                   });
@@ -583,12 +607,12 @@
                error: function (jqXHR, status, errorThrown) {
                   error_handle(jqXHR, status, errorThrown);
                   $('.btn-add-blacklist').prop('disabled', false);
-                  $('.btn-add-blacklist').html('Apply To Blacklist');
+                  $('.btn-add-blacklist').html('Apply');
                },
                success: function (r) {
                   if(r.success){
                      $('.btn-add-blacklist').prop('disabled', false);
-                     $('.btn-add-blacklist').html('Apply To Blacklist');
+                     $('.btn-add-blacklist').html('Apply');
                      $('.common_name').removeAttr('checked'); 
                      $(this).render_data();
                      toastr.success(r.msg);
@@ -740,7 +764,7 @@
             },
             error: function (jqXHR, status, errorThrown) {
                error_handle(jqXHR, status, errorThrown);
-               loading_form(form, 'hide');
+               loading_form(form, 'hide', 'Apply');
             },
             beforeSend: function (xhr) {
                loading_form(form, 'show');
@@ -754,7 +778,7 @@
                }else{
                   toastr.error(r.msg);
                }
-               loading_form(form, 'hide');
+               loading_form(form, 'hide', 'Apply');
             },
          });
          e.preventDefault();
@@ -782,7 +806,7 @@
                }else{
                   toastr.error(r.msg);
                }
-               loading_form(form, 'hide');
+               loading_form(form, 'hide', 'Apply');
             },
          });
          e.preventDefault();
@@ -802,7 +826,7 @@
          });
 
          var t = '';
-         t += '<li class="list-group-item item-used-'+aliasnoreplace+'" style="padding:4px;">';
+         t += '<li class="list-group-item item-used-'+aliasnoreplace+'" style="border: 0px;background-color: #4c4c4c;padding:4px;">';
             t += '<input type="hidden" name="alias_master" value="'+id+'">';
             t += ''+alias+'';
          t += '</li>';
@@ -818,9 +842,9 @@
          if($('.item-alias-'+aliasnoreplace+'').length == 0){
             if($('.item-used-'+aliasnoreplace+'').length == 0){
                var t = '';
-               t += '<li class="list-group-item item-alias-'+aliasnoreplace+'" style="padding:4px;">';
+               t += '<li class="list-group-item item-alias-'+aliasnoreplace+'" style="border: 0px;background-color: #4c4c4c;padding:4px;">';
                   t += '<input type="hidden" name="alias_parent['+id+'][alias_parent]" value="'+id+'">';
-                  t += '<button type="button" class="btn btn-xs btn-remove-selected" data-id=""><i class="fa fa-remove"></i></button>&nbsp;';
+                  t += '<button type="button" class="btn btn-xs btn-primary btn-remove-selected" data-id=""><i class="fa fa-remove"></i></button>&nbsp;';
                   t += ''+alias+'';
                t += '</li>';
                $('.sect-selected').prepend(t);  

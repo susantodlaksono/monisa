@@ -14,28 +14,28 @@
 		</div>
 		<div class="col-md-4" style="">
 	      <div class="description-apply text-center">
-	         <h1 class="no-margin bold" style="color:#00a651"><?php echo $master ?></h1>
-	         <div class="description-text bold" style="color:#00a651">Master</div>
+	         <h1 class="no-margin bold"><?php echo $master ?></h1>
+	         <div class="description-text bold">Master</div>
 	      </div>
 		</div> 
 	</div>
 	<div class="row" style="margin-top: 10px;">
 		<div class="col-md-4" style="">
 	      <div class="description-apply text-center">
-	         <h1 class="no-margin bold" style="color:#21a9e1"><?php echo $alias ?></h1>
-	         <div class="description-text bold" style="color:#21a9e1">Alias</div>
+	         <h1 class="no-margin bold"><?php echo $alias ?></h1>
+	         <div class="description-text bold">Alias</div>
 	      </div>
 		</div> 
 		<div class="col-md-4" style="">
 	      <div class="description-apply text-center">
-	         <h1 class="no-margin bold" style="color:#cc2424"><?php echo $blacklist ?></h1>
-	         <div class="description-text bold" style="color:#cc2424">Blacklist</div>
+	         <h1 class="no-margin bold"><?php echo $blacklist ?></h1>
+	         <div class="description-text bold">Blacklist</div>
 	      </div>
 		</div> 
 		<div class="col-md-4" style="">
 	      <div class="description-apply text-center">
-	         <h1 class="no-margin bold" style="color:#003471"><?php echo $common ?></h1>
-	         <div class="description-text bold" style="color:#003471">Common</div>
+	         <h1 class="no-margin bold"><?php echo $common ?></h1>
+	         <div class="description-text bold">Common</div>
 	      </div>
 		</div> 
 	</div> 

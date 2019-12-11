@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/neon-theme.css">
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/neon-forms.css">
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/custom.css">
-<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/skins/blue.css">
+<link rel="stylesheet" href="<?php echo base_url() ?>assets/css/skins/black.css">
 <link rel="stylesheet" href="<?php echo base_url() ?>ebdesk.css">
 <link rel="stylesheet" href="<?php echo base_url() ?>loading.css">
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/daterangepicker/css/daterangepicker.css">

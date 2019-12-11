@@ -69,7 +69,7 @@ class M_base_menu extends CI_Model {
                         $r .= '<i class="'.$v['icon'].'"></i>';
                         $r .= '<span class="title" style="border: 1px solid #303641;">'.$v['name'].'</span>';
                      $r .= '</a>';
-                     $r .= '<ul>';
+                     $r .= '<ul style="border: 1px solid #3e3e3e;">';
                         foreach ($sub_menu as $vv) {
                            $sub_menu_third = $this->menu(NULL, $vv['id']);
                            if(count($sub_menu_third) > 0){
@@ -78,7 +78,7 @@ class M_base_menu extends CI_Model {
                                     $r .= '<i class="'.$vv['icon'].'"></i>';
                                     $r .= '<span class="title">'.$vv['name'].'</span>';
                                  $r .= '</a>';
-                                 $r .= '<ul>';
+                                 $r .= '<ul style="border: 1px solid #3e3e3e;">';
                                     foreach ($sub_menu_third as $vvv) {
                                        $r .= '<li class="'.($vvv['url'] == uri_string() ? 'active' : '').'">';
                                           $r .= '<a href="'.site_url($vvv['url']).'">';

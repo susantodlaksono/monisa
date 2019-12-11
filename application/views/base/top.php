@@ -32,19 +32,19 @@
       <span class="label label-default notif-summary">10 Management</span>
    </div> -->
    <div class="col-md-3 col-sm-3 clearfix hidden-xs" style="border:0px solid black;height:50px;">
-      <ul class="user-info pull-right pull-none-xsm" style="margin-top:2px;margin-bottom: 9px;">
-         <li class="profile-info dropdown"><!-- add class "pull-right" if you want to place this from right -->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+      <ul class="user-info pull-right pull-none-xsm" style="margin-top: 13px;margin-bottom: 9px;border: 1px solid #5d5252;">
+         <li class="profile-info dropdown" style="padding:7px;margin-right:0px;"><!-- add class "pull-right" if you want to place this from right -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="color:#fff;">
                <?php 
-                  if($avatar){
-                     echo '<img src="'.base_url().'/files/user_profil_image/'.$avatar.'" alt="" class="img-circle" width="44">';
-                  }else{
-                     echo '<img src="'.base_url().'/files/user_profil_image/noavatar.png" alt="" class="img-circle" width="44">';
-                  }
+                  // if($avatar){
+                  //    echo '<img src="'.base_url().'/files/user_profil_image/'.$avatar.'" alt="" class="img-circle" width="44">';
+                  // }else{
+                  //    echo '<img src="'.base_url().'/files/user_profil_image/noavatar.png" alt="" class="img-circle" width="44">';
+                  // }
                ?>
-               <?php echo $username ?>
+               <?php echo $username ?> <i class="fa fa-caret-square-o-down"></i>
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu" style="margin-left:-147px;border:1px solid #4c4b4b;">
                <!-- Reverse Caret -->
                <li class="caret"></li>
                <li>
@@ -58,4 +58,4 @@
       </ul>
    </div>
 </div>
-<hr />
+<hr style="border-top:1px solid #3c3c3c" />
